@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+.greetings {
+  font-family: "Lobster", cursive;
+}
 /* .App {
   text-align: center;
 }
