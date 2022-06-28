@@ -1,16 +1,15 @@
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  /* place-content: center; */
-  grid-gap: 7vw;
+  grid-template-columns: repeat(auto-fit, 300px);
+  column-gap: 8vw;
   row-gap: 1vw;
+  justify-content: center;
 }
 .card {
-  justify-content: flex-start;
+  background-color: aqua;
   position: relative;
   width: 15rem;
   height: 10rem;
-  background-color: aqua;
   border-radius: 1vw;
   margin: 1vw;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);

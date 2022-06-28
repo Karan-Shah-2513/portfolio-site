@@ -7,7 +7,7 @@ import SimpleAccordion from "./Components/SimpleAccordion";
 import Typography from "@mui/material/Typography";
 import gsap from "gsap";
 import TextPlugin from "gsap/TextPlugin";
-import Card from "./Components/Card";
+import Cards from "./Components/Cards";
 // import { duration } from "@mui/material";
 
 // const pages = ["Home", "Projects", "Blogs"];
@@ -44,7 +44,7 @@ function App() {
           ref={text}
         ></Typography>
       </Typography>
-      <Card></Card>
+      <Cards></Cards>
     </div>
   );
 }
