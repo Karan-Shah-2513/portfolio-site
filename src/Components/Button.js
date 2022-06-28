@@ -10,7 +10,7 @@ const buttons = [
     Home
   </Button>,
   <Button key="two">
-    <Link to="/blogs"> Blogs</Link>
+    <Link to="/blogs">Blogs</Link>
   </Button>,
   //   <Button key="three">Three</Button>,
 ];

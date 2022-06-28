@@ -2,11 +2,12 @@ import * as React from "react";
 // import ReactDOM from "react-dom";
 // import Button from "@mui/material/Button";
 // import AppBar from "@mui/material/AppBar";
-import "./App.css";
-import SimpleAccordion from "./Utils/SimpleAccordion";
+import "./stylings/App.css";
+import SimpleAccordion from "./Components/SimpleAccordion";
 import Typography from "@mui/material/Typography";
 import gsap from "gsap";
 import TextPlugin from "gsap/TextPlugin";
+import Card from "./Components/Card";
 // import { duration } from "@mui/material";
 
 // const pages = ["Home", "Projects", "Blogs"];
@@ -16,7 +17,7 @@ function App() {
   const text = React.useRef();
   React.useEffect(() => {
     gsap.to(text.current, {
-      duration: 2,
+      duration: 3,
       text: "Full Stack Web Developer",
       ease: "none",
     });
@@ -43,6 +44,7 @@ function App() {
           ref={text}
         ></Typography>
       </Typography>
+      <Card></Card>
     </div>
   );
 }
