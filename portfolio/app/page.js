@@ -3,7 +3,7 @@
 export default function Home() {
   return (
     <main>
-      <div className="mt-10">Hello Karan</div>
+      <div>Hello I am Karan Shah</div>
     </main>
   );
 }
