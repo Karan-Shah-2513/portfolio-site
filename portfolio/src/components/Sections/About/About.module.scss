@@ -1,5 +1,7 @@
 .About {
   margin: 2rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
 }
 
 .welcome {
@@ -9,5 +11,20 @@
 }
 
 .content {
+  margin-top: 5rem;
+  display: flex;
+  width: 40%;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+}
+
+.gif {
+  justify-content: flex-end;
+  align-items: flex-end;
   width: 50%;
 }
