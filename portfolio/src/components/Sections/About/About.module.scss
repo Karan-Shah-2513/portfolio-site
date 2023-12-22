@@ -11,14 +11,14 @@
 }
 
 .content {
-  margin-top: 5rem;
-  display: flex;
+  margin-top: 4rem;
   width: 40%;
   font-size: 1.5rem;
 }
 
 .container {
   display: flex;
+  margin-top: 5rem;
   justify-content: space-between;
   margin-bottom: 8rem;
 }
@@ -27,4 +27,27 @@
   justify-content: flex-end;
   align-items: flex-end;
   width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .About {
+    margin: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .content {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .container {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .gif {
+    margin-top: 2rem;
+    width: 100%;
+  }
 }

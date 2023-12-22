@@ -7,3 +7,9 @@
 .prompt {
   color: #72ffc9;
 }
+
+@media screen and (max-width: 768px) {
+  .Command {
+    font-size: 1rem;
+  }
+}

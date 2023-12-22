@@ -4,10 +4,10 @@ import Command from "@/components/Command/Command";
 const About = () => {
   return (
     <div className={styles.About}>
-      <div className={styles.welcome}>Welcome!</div>
-      <Command command="whoami" />
       <div className={styles.container}>
         <div className={styles.content}>
+          <div className={styles.welcome}>Welcome!</div>
+          <Command command="whoami" />
           <p>
             I am <span>Karan Shah</span> a Fourth Year{" "}
             <span>Information Technology</span> Student with an ability to
