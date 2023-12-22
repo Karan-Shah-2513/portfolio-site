@@ -1,9 +1,14 @@
-// import Image from "next/image";
+import styles from "./index.module.scss";
+import Navbar from "@/components/Navbar/Navbar";
+import Sections from "@/components/Sections/Sections";
 
 export default function Home() {
   return (
     <main>
-      <div>Hello I am Karan Shah</div>
+      <Navbar />
+      <div className={styles.index}>
+        <Sections />
+      </div>
     </main>
   );
 }
