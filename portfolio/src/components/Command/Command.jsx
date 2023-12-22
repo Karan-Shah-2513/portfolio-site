@@ -1,9 +1,10 @@
-import style from "./Command.module.scss";
-const Command = () => {
+import styles from "./Command.module.scss";
+const Command = (props) => {
   return (
-    <>
-      <div></div>
-    </>
+    <div className={styles.Command}>
+      <div className={styles.prompt}>portfolio@karan:-$ </div>
+      {props.command}
+    </div>
   );
 };
 

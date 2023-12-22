@@ -38,7 +38,6 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <hr className={styles.hr}></hr>
     </>
   );
 };
