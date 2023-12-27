@@ -17,7 +17,7 @@ const About = () => {
           </p>
         </div>
         <div className={styles.gif}>
-          <img src="/replace-with-good-svg.jpg" alt="coder" />
+          <img src="/icons/replace-with-good-svg.jpg" alt="coder" />
         </div>
       </div>
     </div>

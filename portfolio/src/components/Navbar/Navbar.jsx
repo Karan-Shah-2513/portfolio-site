@@ -31,10 +31,10 @@ const Navbar = () => {
             target="_blank"
             href="https://www.linkedin.com/in/karan-sunil-shah/"
           >
-            <img width="35px" src="/linkedin.png" alt="LinkedIn" />
+            <img width="35px" src="/icons/linkedin.png" alt="LinkedIn" />
           </a>
           <a target="_blank" href="https://github.com/Karan-Shah-2513/">
-            <img width="30px" src="/github.png" alt="LinkedIn" />
+            <img width="30px" src="/icons/github.png" alt="LinkedIn" />
           </a>
         </div>
       </div>
