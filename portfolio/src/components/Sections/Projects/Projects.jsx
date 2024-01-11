@@ -1,12 +1,13 @@
 import styles from "./Projects.module.scss";
 
 import ProjectCard from "./ProjectCard/ProjectCard";
+import Command from "@/components/Command/Command";
 
 const projectList = [
   {
     projectName: "Decentralised Web Meetings with Code Collaboration",
-    link: "https://example.com/meetings",
-    imagePath: "/images/meetings.png",
+    link: "https://proxima-karan-shah-2513.cloud.okteto.net/",
+    imagePath: "/projectsImages/proxima.png",
     description: [
       "Through this website developers can have decentralised video meetings with live code collaboration",
       "Used QuillJS and sockets to edit code simultaneously from multiple places just like google docs",
@@ -19,7 +20,7 @@ const projectList = [
   {
     projectName: "Defensive Data Transfer",
     link: "https://example.com/data-transfer",
-    imagePath: "/images/data-transfer.png",
+    imagePath: "/projectImages/data-transfer.png",
     description: [
       "Created a CLI solution for shifting large databases/files from local to cloud",
       "Implemented PKI using OpenSSL, used AES-CBC mode for encrypting data and RSA for the AES key",
@@ -30,7 +31,7 @@ const projectList = [
   {
     projectName: "Restaurant reviews website",
     link: "https://example.com/restaurant-reviews",
-    imagePath: "/images/restaurant-reviews.png",
+    imagePath: "/projectImages/restaurant-reviews.png",
     description: [
       "Through the website you can Add, Edit or Delete a review of restaurants",
       "Used MongoDB Atlas for storing reviews",
@@ -41,7 +42,7 @@ const projectList = [
   {
     projectName: "Data Structure Visualizer",
     link: "https://example.com/data-structure-visualizer",
-    imagePath: "/images/data-structure-visualizer.png",
+    imagePath: "/projectImages/data-structure-visualizer.png",
     description: [
       "Built a Website that aims to help programmers visualize Data Structures",
       "Data Structures covered include Heap, Binary search tree, Binary tree, Stack and Queue",
@@ -52,7 +53,7 @@ const projectList = [
   {
     projectName: "Basic Android Calculator App",
     link: "https://example.com/calculator-app",
-    imagePath: "/images/calculator-app.png",
+    imagePath: "/projectImages/calculator-app.png",
     description: [
       "Built a calculator app can that can do basic operations(+,-,*,/)",
       "The app was built on Android Studio",
@@ -64,12 +65,19 @@ const projectList = [
 const Projects = () => {
   return (
     <>
-      <h1 id="projects">Projects Section</h1>
+      <div className={styles["command"]}>
+        <Command id="projects" command="ls projects/" />
+      </div>
+
       <div className={styles.projectsList}>
         {projectList.map((project, index) => (
           <ProjectCard
             key={index}
-            projectName={projectList[index].projectName}
+            projectName={project.projectName}
+            link={project.link}
+            imagePath={project.imagePath}
+            description={project.description}
+            date={project.date}
           />
         ))}
       </div>

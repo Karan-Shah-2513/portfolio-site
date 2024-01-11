@@ -1,57 +1,34 @@
 .project-card {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  perspective: 1000px;
-  border: 1px solid #ccc;
+  margin: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .project-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    .title {
+      font-size: 2rem;
+    }
+  }
+  .description {
+    margin: 1rem;
+  }
 }
 
-.project-card-front,
-.project-card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transition: transform 0.5s;
-}
-
-.project-card-front {
-  transform: rotateY(0deg);
-}
-
-.project-card-back {
-  transform: rotateY(180deg);
-}
-
-.project-card-front.hidden,
-.project-card-back.hidden {
-  transform: rotateY(180deg);
-}
-
-.project-card:hover .project-card-front {
-  transform: rotateY(180deg);
-}
-
-.project-card:hover .project-card-back {
-  transform: rotateY(0deg);
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-}
-
-.project-card h3 {
-  margin-top: 10px;
-}
-
-.project-card a {
-  display: block;
-  margin-top: 10px;
-}
-
-.project-card p {
-  margin-top: 10px;
+@media screen and (max-width: 768px) {
+  .project-card {
+    margin: 1rem;
+    .project-card-front {
+      .title {
+        font-size: 1.5rem;
+      }
+    }
+    .description {
+      margin: 0.5rem;
+    }
+  }
 }

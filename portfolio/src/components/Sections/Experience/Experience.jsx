@@ -25,7 +25,7 @@ const experience = [
 
 const Experience = () => {
   return (
-    <div className={styles.Experience}>
+    <section id="experience" className={styles.Experience}>
       <div className={styles.Command}>
         <Command command="grep -i 'work experience' resume.txt" />
       </div>
@@ -43,7 +43,7 @@ const Experience = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 export default Experience;

@@ -3,7 +3,7 @@ import Command from "@/components/Command/Command";
 
 const About = () => {
   return (
-    <div className={styles.About}>
+    <section id="about" className={styles.About}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.welcome}>Welcome!</div>
@@ -20,7 +20,7 @@ const About = () => {
           <img src="/icons/replace-with-good-svg.jpg" alt="coder" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default About;

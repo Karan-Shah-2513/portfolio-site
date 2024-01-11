@@ -43,7 +43,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className={styles.Skills}>
+    <section id="skills" className={styles.Skills}>
       <div className={styles.Command}>
         <Command command="ls skills/" />
         {/* <div className="para">
@@ -57,7 +57,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
