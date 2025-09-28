@@ -1,7 +1,5 @@
-import styles from "./Projects.module.scss";
-
 import ProjectCard from "./ProjectCard/ProjectCard";
-import Command from "@/components/Command/Command";
+import Command from "@/components/command-prompt";
 
 const projectList = [
   {
@@ -64,12 +62,12 @@ const projectList = [
 
 const Projects = () => {
   return (
-    <>
-      <div className={styles["command"]}>
+    <section id="projects" className="py-10">
+      <div className="flex justify-center">
         <Command id="projects" command="ls projects/" />
       </div>
 
-      <div className={styles.projectsList}>
+      <div className="flex flex-wrap justify-between max-w-[1200px] w-full mx-auto px-5">
         {projectList.map((project, index) => (
           <ProjectCard
             key={index}
@@ -81,7 +79,7 @@ const Projects = () => {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

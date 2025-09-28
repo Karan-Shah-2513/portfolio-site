@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Sections.module.scss";
 import About from "./About/About";
 import Skills from "./Skills/Skils";
 import Experience from "./Experience/Experience";
@@ -19,45 +18,36 @@ const Sections = () => {
 
   return (
     <div>
-      {sections.map((section, index) => (
-        <div key={index}>
-          {index === 0 && (
-            <>
-              <About />
-              <div className={styles.hrSlantLeft} />
-            </>
-          )}
-          {index === 1 && (
-            <>
-              <Skills />
-              <div className={styles.hrSlantRight} />
-            </>
-          )}
-          {index === 2 && (
-            <>
-              <Experience />
-              <div className={styles.hrSlantLeft} />
-            </>
-          )}
-          {index === 3 && (
-            <>
-              <Projects />
-              <div className={styles.hrSlantRight} />
-            </>
-          )}
-          {index === 4 && (
-            <>
-              <Achievements />
-              <div className={styles.hrSlantLeft} />
-            </>
-          )}
-          {index === 5 && (
-            <>
-              <Contact />
-            </>
-          )}
-        </div>
-      ))}
+      <div>
+        <>
+          <About />
+          <div className="relative h-5 bg-transparent mt-20 before:content-[''] before:absolute before:w-full before:h-full before:border-t-[3px] before:border-white before:-rotate-3 before:origin-left" />
+        </>
+
+        <>
+          <Skills />
+          <div className="relative h-5 bg-transparent mt-20 before:content-[''] before:absolute before:w-full before:h-full before:border-t-[3px] before:border-white before:rotate-3 before:origin-left" />
+        </>
+
+        <>
+          <Experience />
+          <div className="relative h-5 bg-transparent mt-20 before:content-[''] before:absolute before:w-full before:h-full before:border-t-[3px] before:border-white before:-rotate-3 before:origin-left" />
+        </>
+
+        <>
+          <Projects />
+          <div className="relative h-5 bg-transparent mt-20 before:content-[''] before:absolute before:w-full before:h-full before:border-t-[3px] before:border-white before:rotate-3 before:origin-left" />
+        </>
+
+        <>
+          <Achievements />
+          <div className="relative h-5 bg-transparent mt-20 before:content-[''] before:absolute before:w-full before:h-full before:border-t-[3px] before:border-white before:-rotate-3 before:origin-left" />
+        </>
+
+        <>
+          <Contact />
+        </>
+      </div>
     </div>
   );
 };

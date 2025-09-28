@@ -1,44 +1,19 @@
 "use client";
-import styles from "./ProjectCard.module.scss";
 
 const ProjectCard = ({ projectName, link, imagePath, description }) => {
   return (
-    <div className={styles["project-card"]}>
-      <div className={styles["project-card-front"]}>
-        <h2 className={styles["title"]}>{projectName}</h2>
+    <div className="flex flex-col justify-center items-center m-10 md:m-4">
+      <div className="flex flex-col justify-center items-center m-4">
+        <h2 className="text-4xl md:text-2xl">{projectName}</h2>
         <img width="70%" src={imagePath} alt={projectName} />
         <a href={link} target="_blank" rel="noopener noreferrer">
           Visit Project
         </a>
       </div>
-      <div className={styles["description"]}>
+      <div className="m-4 md:m-2">
         <p>{description}</p>
       </div>
     </div>
-    // <div
-    //   className={styles["project-card"]}
-    //   onMouseEnter={handleCardFlip}
-    //   onMouseLeave={handleCardFlip}
-    // >
-    //   <div
-    //     className={`${styles["project-card-front"]} ${
-    //       isFlipped ? styles.hidden : ""
-    //     }`}
-    //   >
-    //     <img src={imagePath} alt={projectName} />
-    //     <h2>{projectName}</h2>
-    //     <a href={link} target="_blank" rel="noopener noreferrer">
-    //       Visit Project
-    //     </a>
-    //   </div>
-    //   <div
-    //     className={`${styles["project-card-back"]} ${
-    //       isFlipped ? "" : styles.hidden
-    //     }`}
-    //   >
-    //     <p>{description}</p>
-    //   </div>
-    // </div>
   );
 };
 

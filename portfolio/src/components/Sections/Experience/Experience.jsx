@@ -1,5 +1,4 @@
-import Command from "@/components/Command/Command";
-import styles from "./Experience.module.scss";
+import Command from "@/components/command-prompt";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
 
 const experience = [
@@ -25,12 +24,12 @@ const experience = [
 
 const Experience = () => {
   return (
-    <section id="experience" className={styles.Experience}>
-      <div className={styles.Command}>
+    <section id="experience" className="m-16 text-white">
+      <div className="flex justify-center items-center">
         <Command command="grep -i 'work experience' resume.txt" />
       </div>
-      <div className={styles.content}>
-        <h3 className={styles.workExperience}>Work Experience</h3>
+      <div className="text-2xl m-8 flex flex-col justify-center items-center">
+        <h3 className="text-5xl text-[#ff720b]">Work Experience</h3>
 
         {/* loop over experience */}
         {experience.map((exp, index) => (

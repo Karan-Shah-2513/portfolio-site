@@ -1,5 +1,4 @@
-import Command from "@/components/Command/Command";
-import styles from "./Skills.module.scss";
+import Command from "@/components/command-prompt";
 
 const skills = [
   "React",
@@ -43,18 +42,16 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className={styles.Skills}>
-      <div className={styles.Command}>
+    <section id="skills" className="m-8 mx-32 md:mx-8">
+      <div className="flex flex-col items-center">
         <Command command="ls skills/" />
-        {/* <div className="para">
+        {/* <div className="mt-32 block">
           Crazy Developer who wants to explore every stack
         </div> */}
       </div>
-      <div className={styles.skillsList}>
+      <div className="m-8 grid grid-cols-3 gap-4 md:grid-cols-2">
         {skills.map((skill, index) => (
-          <div key={index} className={styles.skill}>
-            {skill}
-          </div>
+          <div key={index}>{skill}</div>
         ))}
       </div>
     </section>
