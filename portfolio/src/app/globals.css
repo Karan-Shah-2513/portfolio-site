@@ -45,6 +45,7 @@
 
 :root {
   --radius: 0.625rem;
+  --header-height: 72px;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -119,4 +120,19 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Anchor offset for sticky header
+   Any element with an id will be offset when navigated to by an anchor link.
+   The --header-height variable is defined in the :root above; tweak it to match your navbar. */
+
+/* Provide a general offset for elements targeted by anchors */
+[id] {
+  /* scroll-margin-top makes the element appear below the fixed/sticky header */
+  scroll-margin-top: var(--header-height);
+}
+
+/* Additionally set scroll-padding on the root scroll container as a fallback for some browsers */
+html {
+  scroll-padding-top: var(--header-height);
 }
