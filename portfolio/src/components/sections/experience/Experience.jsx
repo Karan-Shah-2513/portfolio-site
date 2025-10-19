@@ -1,8 +1,9 @@
 import Command from "@/components/command-prompt";
-import ExperienceCard from "./ExperienceCard/ExperienceCard";
+import ExperienceCard from "./experience-card";
 
 const experience = [
   {
+    id: "deutsche-bank-software-engineer-2023",
     title: "Software Engineering Intern",
     company: "Deutsche Bank",
     duration: "May 2023 - July 2023",
@@ -12,6 +13,7 @@ const experience = [
     ],
   },
   {
+    id: "spit-ai-research-intern-2023",
     title: "Research Intern",
     company: "AI & DL lab at SP-IT",
     duration: "June 2023 - July 2023",
@@ -29,12 +31,10 @@ const Experience = () => {
         <Command command="grep -i 'work experience' resume.txt" />
       </div>
       <div className="text-2xl m-8 flex flex-col justify-center items-center">
-        <h3 className="text-5xl text-[#ff720b]">Work Experience</h3>
-
         {/* loop over experience */}
-        {experience.map((exp, index) => (
+        {experience.map((exp) => (
           <ExperienceCard
-            key={index}
+            key={exp.id}
             title={exp.title}
             company={exp.company}
             duration={exp.duration}
