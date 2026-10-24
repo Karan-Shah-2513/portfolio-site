@@ -1,4 +1,3 @@
-import Image from "next/image";
 import githubIcon from "@/assets/github.png";
 import linkedinIcon from "@/assets/linkedin.png";
 const Navbar = () => {
@@ -28,11 +27,11 @@ const Navbar = () => {
       </div>
       {/* LinkedIn and Github Icons with Link */}
       <div className="ml-4 flex justify-end items-center">
-        <a target="_blank" href="https://www.linkedin.com/in/karan-sunil-shah/">
-          <Image width={35} height={35} src={linkedinIcon} alt="LinkedIn" />
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/karan-sunil-shah/">
+          <img width={35} height={35} src={linkedinIcon} alt="LinkedIn" />
         </a>
-        <a target="_blank" href="https://github.com/Karan-Shah-2513/">
-          <Image width={30} height={30} src={githubIcon} alt="GitHub" />
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Karan-Shah-2513/">
+          <img width={30} height={30} src={githubIcon} alt="GitHub" />
         </a>
       </div>
     </div>
