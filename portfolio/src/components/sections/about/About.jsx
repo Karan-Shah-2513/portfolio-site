@@ -16,7 +16,10 @@ const About = () => {
           </p>
         </div>
         <div className="w-full md:w-1/2 mt-8 md:mt-0 justify-end items-end">
-          <img src="/icons/replace-with-good-svg.jpg" alt="coder" />
+          <img
+            src={`${import.meta.env.BASE_URL}icons/replace-with-good-svg.jpg`}
+            alt="coder"
+          />
         </div>
       </div>
     </section>
