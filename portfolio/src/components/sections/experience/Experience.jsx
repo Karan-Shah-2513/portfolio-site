@@ -2,6 +2,14 @@ import Command from "@/components/command-prompt";
 import ExperienceCard from "./experience-card";
 
 const experience = [
+  // TODO
+  {
+    id: "dws-software-engineer-2024",
+    title: "Senior Technology Analyst - SDE-I",
+    company: "DWS Group",
+    duration: "July 2024 - Present",
+    content: ["Working as a full-stack"],
+  },
   {
     id: "deutsche-bank-software-engineer-2023",
     title: "Software Engineering Intern",
