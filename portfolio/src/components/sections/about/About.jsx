@@ -2,6 +2,7 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import Terminal from "@/components/command-prompt/Terminal";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { PROFILE_EMAIL } from "@/lib/profile";
 
 const About = () => (
   <section
@@ -11,17 +12,17 @@ const About = () => (
     <div className="max-w-152.5">
       <p className="mb-4 font-mono text-xs tracking-[0.12em] text-primary">
         <span className="mr-2 inline-block size-2 rounded-full bg-primary shadow-[0_0_12px_rgb(83_217_152/70%)]" />
-        SOFTWARE ENGINEER · MUMBAI, INDIA
+        FULL-STACK SOFTWARE ENGINEER · MUMBAI, INDIA
       </p>
-      <h1 className="text-[clamp(3.2rem,7vw,5.8rem)] font-semibold leading-[0.98] tracking-[-0.075em]">
-        Hi, I&apos;m Karan.
+      <h1 className="text-[clamp(2.8rem,6vw,5.1rem)] font-semibold leading-[1.02] tracking-[-0.07em]">
+        I build reliable
         <br />
-        <span className="text-muted-foreground">I build useful things.</span>
+        <span className="text-muted-foreground">real-time systems.</span>
       </h1>
       <p className="mt-6 max-w-132.5 text-base leading-8 text-muted-foreground sm:text-lg">
-        Full-stack software engineer working across Java, Spring Boot, React,
-        and TypeScript. I enjoy turning complex problems into reliable
-        products—from multi-tenant platforms to real-time systems.
+        I&apos;m Karan Shah, a full-stack engineer working across Java, Spring
+        Boot, React, and TypeScript. At DWS, I build multi-tenant platforms and
+        real-time trading tools where reliability and clear ownership matter.
       </p>
       <div className="mt-7 flex flex-wrap gap-3">
         <a
@@ -35,7 +36,15 @@ const About = () => (
         </a>
         <a
           className={buttonVariants({ variant: "outline" })}
-          href="mailto:shahkaran2513@gmail.com"
+          href={`${import.meta.env.BASE_URL}resume.html`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View résumé <ArrowUpRight aria-hidden="true" />
+        </a>
+        <a
+          className={buttonVariants({ variant: "outline" })}
+          href={`mailto:${PROFILE_EMAIL}`}
         >
           Get in touch <ArrowUpRight aria-hidden="true" />
         </a>
@@ -46,20 +55,18 @@ const About = () => (
       >
         <div className="grid gap-1">
           <strong className="text-xl tracking-tight">99.9%+</strong>
-          <span className="text-xs text-muted-foreground">
-            service stability
-          </span>
+          <span className="text-xs text-muted-foreground">operational stability</span>
         </div>
         <div className="grid gap-1">
           <strong className="text-xl tracking-tight">50%</strong>
           <span className="text-xs text-muted-foreground">
-            less manual reporting
+            less reporting time
           </span>
         </div>
         <div className="grid gap-1">
           <strong className="text-xl tracking-tight">2×</strong>
           <span className="text-xs text-muted-foreground">
-            hackathon winner
+            hackathon wins
           </span>
         </div>
       </div>

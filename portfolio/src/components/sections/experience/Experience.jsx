@@ -4,14 +4,14 @@ import ExperienceCard from "./experience-card";
 const experience = [
   {
     id: "dws",
-    title: "Senior Technology Analyst · SDE-I",
+    title: "Senior Technology Analyst (SDE-I)",
     company: "DWS Group",
     duration: "July 2024 — Present · Mumbai–Pune, Hybrid",
     content: [
-      "Designed a multi-tenant architecture across Java Spring Boot services, including tenant context propagation, data isolation, and configurable routing for institutional business units.",
+      "Designed a multi-tenant architecture across Java Spring Boot services, enabling multiple institutional business units to share one codebase with isolated data and configurable routing.",
       "Took full-stack ownership of business-critical services, shaping architecture across Spring Boot, React, WebSockets, and ActiveMQ.",
       "Built real-time trading dashboards with React and AG Grid, backed by Java services and event-driven updates with WebSockets, ActiveMQ, and Kafka.",
-      "Coordinated data pipelines and release cycles with engineering and business partners; recognized by senior leadership for high-impact delivery and 99.9%+ operational stability.",
+      "Coordinated data pipelines and releases with engineering and business partners; recognized by senior leadership for high-impact delivery while maintaining 99.9%+ operational stability.",
     ],
   },
   {

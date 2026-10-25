@@ -21,7 +21,7 @@ const commands = {
   },
   projects: {
     output:
-      "Selected projects: Proxima, Defensive Data Transfer, and Data Structure Visualizer.",
+      "Selected projects: Linux-Inspired Portfolio, Proxima, Defensive Data Transfer, and Data Structure Visualizer.",
     target: "projects",
   },
   education: {

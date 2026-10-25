@@ -1,13 +1,14 @@
 import { ArrowUpRight } from "lucide-react";
 import Command from "@/components/command-prompt";
 import { buttonVariants } from "@/components/ui/button";
+import { PROFILE_EMAIL } from "@/lib/profile";
 
 const Contact = () => (
   <section
     id="contact"
     className="mx-auto flex w-[min(1120px,calc(100%-48px))] flex-col items-start border-t border-border/60 py-16 md:py-24"
   >
-    <Command command="echo let's build something useful" />
+    <Command command="echo 'lets build something useful'" />
     <p className="mb-3 mt-9 font-mono text-xs tracking-[0.12em] text-primary">
       OPEN TO GOOD CONVERSATIONS
     </p>
@@ -20,7 +21,7 @@ const Contact = () => (
     </p>
     <a
       className={buttonVariants({ variant: "default" })}
-      href="mailto:shahkaran2513+website@gmail.com"
+      href={`mailto:${PROFILE_EMAIL}`}
     >
       shahkaran2513@gmail.com <ArrowUpRight aria-hidden="true" />
     </a>

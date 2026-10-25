@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Résumé of Karan Shah, full-stack software engineer." />
+    <title>Karan Shah — Résumé</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        color: #18211d;
+        background: #edf2ee;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+      }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 32px 16px; }
+      main {
+        width: min(850px, 100%);
+        margin: 0 auto;
+        padding: 48px 56px;
+        background: #fff;
+        box-shadow: 0 12px 45px rgb(20 40 28 / 12%);
+      }
+      .actions { display: flex; justify-content: flex-end; margin-bottom: 20px; }
+      button {
+        border: 0;
+        border-radius: 6px;
+        padding: 10px 14px;
+        background: #176a45;
+        color: #fff;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      h1 { margin: 0; font-size: 34px; letter-spacing: -1px; }
+      .headline { margin: 5px 0 12px; color: #176a45; font-size: 17px; font-weight: 600; }
+      .contact { display: flex; flex-wrap: wrap; gap: 6px 15px; color: #46534b; font-size: 12px; }
+      a { color: #176a45; text-decoration: none; }
+      .summary { margin: 17px 0 0; color: #35423a; font-size: 13px; line-height: 1.55; }
+      section { margin-top: 23px; }
+      h2 {
+        margin: 0 0 11px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #cbd8cf;
+        color: #176a45;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .role, .project, .education { break-inside: avoid; margin-top: 12px; }
+      .role-heading, .project-heading, .education-heading {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      h3 { margin: 0; font-size: 14px; }
+      .company, .subtitle { margin: 3px 0 0; color: #176a45; font-size: 12px; font-weight: 600; }
+      time { flex: 0 0 auto; color: #5c6860; font-size: 11px; }
+      ul { margin: 6px 0 0; padding-left: 18px; color: #35423a; font-size: 11.5px; line-height: 1.45; }
+      li + li { margin-top: 3px; }
+      .skills { margin: 0; color: #35423a; font-size: 11.5px; line-height: 1.7; }
+      .skills strong { color: #18211d; }
+      .note { color: #5c6860; font-size: 11.5px; line-height: 1.5; }
+
+      @media (max-width: 600px) {
+        body { padding: 0; background: #fff; }
+        main { padding: 28px 22px; box-shadow: none; }
+        .role-heading, .project-heading, .education-heading { flex-direction: column; gap: 3px; }
+      }
+
+      @media print {
+        @page { size: A4; margin: 14mm; }
+        body { padding: 0; background: #fff; }
+        main { width: auto; margin: 0; padding: 0; box-shadow: none; }
+        .actions { display: none; }
+        a { color: inherit; }
+        section { margin-top: 17px; }
+        .role, .project, .education { margin-top: 9px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="actions">
+        <button type="button" onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <header>
+        <h1>Karan Shah</h1>
+        <p class="headline">Full-Stack Software Engineer · Java, Spring Boot, React & TypeScript</p>
+        <div class="contact">
+          <span>Mumbai, India</span>
+          <a href="mailto:shahkaran2513@gmail.com">shahkaran2513@gmail.com</a>
+          <a href="https://www.linkedin.com/in/karan-sunil-shah/">LinkedIn</a>
+          <a href="https://github.com/Karan-Shah-2513">GitHub</a>
+        </div>
+        <p class="summary">
+          Full-stack engineer building multi-tenant platforms and real-time systems for financial services.
+          Contributed to mission-critical services operating at 99.9%+ stability and automated reporting that
+          reduced manual effort by 50%.
+        </p>
+      </header>
+
+      <section>
+        <h2>Experience</h2>
+        <article class="role">
+          <div class="role-heading">
+            <div>
+              <h3>Senior Technology Analyst (SDE-I)</h3>
+              <p class="company">DWS Group · Mumbai–Pune, Hybrid</p>
+            </div>
+            <time>July 2024 — Present</time>
+          </div>
+          <ul>
+            <li>Designed a multi-tenant architecture across Java Spring Boot services, enabling multiple institutional business units to share one codebase with isolated data and configurable routing.</li>
+            <li>Took full-stack ownership of business-critical services across Spring Boot, React, WebSockets, and ActiveMQ.</li>
+            <li>Built real-time trading dashboards with React and AG Grid, backed by Java services and event-driven updates using WebSockets, ActiveMQ, and Kafka.</li>
+            <li>Coordinated data pipelines and releases with engineering and business partners; recognized by senior leadership for high-impact delivery while maintaining 99.9%+ operational stability.</li>
+          </ul>
+        </article>
+        <article class="role">
+          <div class="role-heading">
+            <div>
+              <h3>Software Engineer Intern</h3>
+              <p class="company">W.E. matter · Mumbai</p>
+            </div>
+            <time>January 2024 — June 2024</time>
+          </div>
+          <ul>
+            <li>Built REST APIs with Node.js, Fastify, and MySQL alongside a React frontend; also worked on a cross-platform React Native application.</li>
+            <li>Automated client-ready PowerPoint reports with TypeScript, reducing manual reporting time by 50%.</li>
+          </ul>
+        </article>
+        <article class="role">
+          <div class="role-heading">
+            <div>
+              <h3>Software Engineer Intern</h3>
+              <p class="company">Deutsche Bank · Pune</p>
+            </div>
+            <time>June 2023 — July 2023</time>
+          </div>
+          <ul>
+            <li>Worked with DevOps to integrate a Java Spring Boot application into existing infrastructure and addressed open-source software vulnerabilities.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Selected Projects</h2>
+        <article class="project">
+          <div class="project-heading">
+            <div>
+              <h3><a href="https://github.com/Karan-Shah-2513/portfolio-site">Linux-Inspired Portfolio</a></h3>
+              <p class="subtitle">Interactive, command-driven portfolio with recruiter-friendly profile sections</p>
+            </div>
+            <time>2026</time>
+          </div>
+          <ul>
+            <li>Built an allowlisted terminal interface that navigates accessible profile content without executing arbitrary shell commands.</li>
+            <li>Implemented a responsive site with React, Vite, Tailwind CSS, and reusable shadcn-style components.</li>
+          </ul>
+        </article>
+        <article class="project">
+          <div class="project-heading">
+            <div>
+              <h3><a href="https://github.com/Karan-Shah-2513/Proxima">Proxima</a></h3>
+              <p class="subtitle">Decentralized meetings and collaborative code editing</p>
+            </div>
+            <time>2023</time>
+          </div>
+          <ul>
+            <li>Built a collaborative editor using QuillJS and WebSockets, integrating Huddle01 meetings and IPFS file storage.</li>
+            <li>Winner, ETHGlobal 2023 — Best Use of Huddle01. <a href="https://ethglobal.com/showcase/proxima-z0rpt">Showcase</a></li>
+          </ul>
+        </article>
+        <article class="project">
+          <div class="project-heading">
+            <div>
+              <h3><a href="https://github.com/Karan-Shah-2513/barclays-hack">Defensive Data Transfer</a></h3>
+              <p class="subtitle">Secure CLI transfer of large databases to cloud environments</p>
+            </div>
+            <time>2023</time>
+          </div>
+          <ul>
+            <li>Used AES-CBC encryption and RSA key exchange; tested with AWS RDS and PostgreSQL.</li>
+            <li>Winner, Barclays Data Stellar Hackathon — Most Innovative Solution. <a href="https://www.hackerearth.com/challenges/hackathon/barclays-data-stellar-SPIT/dashboard/491dfe2/submission/published/defensive-data-transfer/">Solution</a></li>
+          </ul>
+        </article>
+        <article class="project">
+          <div class="project-heading">
+            <div>
+              <h3><a href="https://github.com/Karan-Shah-2513/visualizer">Data Structure Visualizer</a></h3>
+              <p class="subtitle">Interactive heap, binary search tree, stack, and queue visualizer</p>
+            </div>
+            <time>2021</time>
+          </div>
+          <p class="note">Built with HTML Canvas, JavaScript, and CSS. <a href="https://karan-shah-2513.github.io/visualizer/">Live demo</a></p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <article class="education">
+          <div class="education-heading">
+            <div>
+              <h3>Sardar Patel Institute of Technology (SP-IT)</h3>
+              <p class="note">B.Tech in Information Technology · CGPA 8.8</p>
+            </div>
+            <time>2020 — 2024 · Mumbai</time>
+          </div>
+          <p class="note">MHT-CET state-level entrance exam: rank 248 · 99.81 percentile.</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Skills & Professional Learning</h2>
+        <p class="skills"><strong>Languages:</strong> Java, Python, C/C++, TypeScript/JavaScript, SQL, Solidity</p>
+        <p class="skills"><strong>Frameworks:</strong> Spring Boot, React, Node.js, Express.js, React Native</p>
+        <p class="skills"><strong>Systems & tools:</strong> Kafka, ActiveMQ, WebSockets, Liquibase, PostgreSQL, MySQL, Linux</p>
+        <p class="skills"><strong>Google Cloud Skills Boost (2026):</strong> Completed hands-on cloud engineering labs and earned Google Cloud skill badges. <a href="https://www.credly.com/users/karan-b-shah/badges/credly">View badges</a></p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -7,6 +7,7 @@ const ProjectCard = ({
   subtitle,
   link,
   secondaryLink,
+  secondaryLinkLabel = "More details",
   imagePath,
   description,
   technologies,
@@ -62,7 +63,7 @@ const ProjectCard = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              ETHGlobal showcase{" "}
+              {secondaryLinkLabel}{" "}
               <ArrowUpRight aria-hidden="true" className="size-4" />
             </a>
           )}
