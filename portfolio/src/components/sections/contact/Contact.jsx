@@ -11,10 +11,10 @@ const Contact = () => (
     <p className="mb-3 mt-9 font-mono text-xs tracking-[0.12em] text-primary">
       OPEN TO GOOD CONVERSATIONS
     </p>
-    <h2 className="max-w-[650px] text-3xl font-semibold tracking-tight sm:text-5xl">
+    <h2 className="max-w-162.5 text-3xl font-semibold tracking-tight sm:text-5xl">
       Have a challenge in mind?
     </h2>
-    <p className="mb-6 mt-4 max-w-[550px] leading-7 text-muted-foreground">
+    <p className="mb-6 mt-4 max-w-137.5 leading-7 text-muted-foreground">
       I&apos;m always glad to connect about thoughtful engineering, interesting
       products, and new opportunities.
     </p>

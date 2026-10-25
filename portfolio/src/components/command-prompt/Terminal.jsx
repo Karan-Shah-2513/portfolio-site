@@ -92,14 +92,14 @@ const Terminal = () => {
           profile — zsh
         </span>
       </div>
-      <div className="min-h-[270px] p-4 sm:p-6">
+      <div className="min-h-67.5 p-4 sm:p-6">
         <p className="mb-2 text-primary">Explore my profile with a command.</p>
         <p className="text-muted-foreground">
           Try <code className="text-primary">help</code> to see what you can
           run.
         </p>
         <div
-          className="mt-5 max-h-[215px] overflow-y-auto"
+          className="mt-5 max-h-53.75 overflow-y-auto"
           aria-live="polite"
           aria-relevant="additions"
         >
