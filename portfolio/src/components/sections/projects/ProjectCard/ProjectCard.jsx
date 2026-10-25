@@ -17,7 +17,7 @@ const ProjectCard = ({
     {imagePath && (
       <img
         className="aspect-16/8 w-full border-b border-border object-cover"
-        src={imagePath}
+        src={`${import.meta.env.BASE_URL}${imagePath}`}
         alt={`${projectName} project preview`}
         loading="lazy"
       />

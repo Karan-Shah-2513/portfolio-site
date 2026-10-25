@@ -7,7 +7,7 @@ const projectList = [
     subtitle: "Decentralized web meetings & code collaboration",
     link: "https://github.com/Karan-Shah-2513/Proxima",
     secondaryLink: "https://ethglobal.com/showcase/proxima-z0rpt",
-    imagePath: "/projectsImages/proxima.png",
+    imagePath: "projectsImages/proxima.png",
     description: [
       "Built a collaborative code editor with QuillJS and real-time updates over WebSockets.",
       "Combined decentralized video meetings with Huddle01 and meeting-file storage on IPFS.",
