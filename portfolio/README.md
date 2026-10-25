@@ -1,6 +1,10 @@
 # Portfolio
 
-Personal portfolio website built with [React 19](https://react.dev/), [Vite](https://vite.dev/), and [Tailwind CSS v4](https://tailwindcss.com/).
+Personal portfolio website built with [React 19](https://react.dev/), [Vite](https://vite.dev/), [Tailwind CSS v4](https://tailwindcss.com/), and shadcn/ui-style components.
+
+## UI
+
+The project uses Tailwind CSS v4 for layout and styling, with reusable shadcn/ui-style primitives in `src/components/ui` (`Button`, `Card`, `Badge`, and `Input`). Component aliases and generator settings are in `components.json`; shared class merging lives in `src/lib/utils.ts`.
 
 ## Getting Started
 

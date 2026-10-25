@@ -3,84 +3,57 @@ import Command from "@/components/command-prompt";
 
 const projectList = [
   {
-    projectName: "Decentralised Web Meetings with Code Collaboration",
-    link: "https://proxima-karan-shah-2513.cloud.okteto.net/",
+    projectName: "Proxima",
+    subtitle: "Decentralized web meetings & code collaboration",
+    link: "https://github.com/Karan-Shah-2513/Proxima",
+    secondaryLink: "https://ethglobal.com/showcase/proxima-z0rpt",
     imagePath: "/projectsImages/proxima.png",
     description: [
-      "Through this website developers can have decentralised video meetings with live code collaboration",
-      "Used QuillJS and sockets to edit code simultaneously from multiple places just like google docs",
-      "Used Huddle01 is used for decentralised meetings",
-      "Used Lighthouse IPFS (Interplanetary File System) for storing meeting files",
-      "Dockerised the application and scheduled a cron job to deploy the website once everyday",
+      "Built a collaborative code editor with QuillJS and real-time updates over WebSockets.",
+      "Combined decentralized video meetings with Huddle01 and meeting-file storage on IPFS.",
     ],
-    date: "Feb 2023",
+    technologies: ["Node.js", "Socket.io", "React", "IPFS"],
+    linkLabel: "View source",
+    date: "February 2023",
   },
   {
     projectName: "Defensive Data Transfer",
-    link: "https://example.com/data-transfer",
-    imagePath: "/projectImages/data-transfer.png",
+    subtitle: "A CLI for secure database transfers",
     description: [
-      "Created a CLI solution for shifting large databases/files from local to cloud",
-      "Implemented PKI using OpenSSL, used AES-CBC mode for encrypting data and RSA for the AES key",
-      "Tested with AWS RDS with PostgreSQL setup",
+      "Created a command-line tool to transfer large databases and files from local environments to the cloud.",
+      "Used AES-CBC encryption with RSA key exchange and tested transfers with AWS RDS and PostgreSQL.",
     ],
+    technologies: ["AWS RDS", "PostgreSQL", "OpenSSL", "RSA"],
     date: "April 2023",
   },
   {
-    projectName: "Restaurant reviews website",
-    link: "https://example.com/restaurant-reviews",
-    imagePath: "/projectImages/restaurant-reviews.png",
-    description: [
-      "Through the website you can Add, Edit or Delete a review of restaurants",
-      "Used MongoDB Atlas for storing reviews",
-      "Used ExpressJS framework for building apis for the React Frontend",
-    ],
-    date: "July 2022",
-  },
-  {
     projectName: "Data Structure Visualizer",
-    link: "https://example.com/data-structure-visualizer",
-    imagePath: "/projectImages/data-structure-visualizer.png",
+    subtitle: "Learn data structures through interaction",
+    link: "https://karan-shah-2513.github.io/visualizer/",
     description: [
-      "Built a Website that aims to help programmers visualize Data Structures",
-      "Data Structures covered include Heap, Binary search tree, Binary tree, Stack and Queue",
-      "Used HTML canvas for the visualization of nodes/stacks",
+      "Created an interactive visualizer for heaps, binary search trees, stacks, and queues.",
+      "Rendered data structure operations using HTML Canvas.",
     ],
-    date: "Dec 2021",
-  },
-  {
-    projectName: "Basic Android Calculator App",
-    link: "https://example.com/calculator-app",
-    imagePath: "/projectImages/calculator-app.png",
-    description: [
-      "Built a calculator app can that can do basic operations(+,-,*,/)",
-      "The app was built on Android Studio",
-    ],
-    date: "2020",
+    technologies: ["HTML", "JavaScript", "CSS", "Canvas"],
+    linkLabel: "Open live demo",
+    date: "December 2021",
   },
 ];
 
-const Projects = () => {
-  return (
-    <section id="projects" className="py-10">
-      <div className="flex justify-center">
-        <Command id="projects" command="ls projects/" />
-      </div>
-
-      <div className="flex flex-wrap justify-between max-w-[1200px] w-full mx-auto px-5">
-        {projectList.map((project, index) => (
-          <ProjectCard
-            key={index}
-            projectName={project.projectName}
-            link={project.link}
-            imagePath={project.imagePath}
-            description={project.description}
-            date={project.date}
-          />
-        ))}
-      </div>
-    </section>
-  );
-};
+const Projects = () => (
+  <section id="projects" className="mx-auto w-[min(1120px,calc(100%-48px))] border-t border-border/60 py-16 md:py-20">
+    <Command command="ls projects/" />
+    <div className="mb-8 mt-5 max-w-[660px]">
+      <p className="mb-2 font-mono text-xs tracking-[0.12em] text-primary">SELECTED WORK</p>
+      <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Projects</h2>
+      <p className="mt-3 leading-7 text-muted-foreground">A few builds that bring together systems thinking and hands-on engineering.</p>
+    </div>
+    <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2">
+      {projectList.map((project) => (
+        <ProjectCard key={project.projectName} {...project} />
+      ))}
+    </div>
+  </section>
+);
 
 export default Projects;

@@ -2,55 +2,61 @@ import Command from "@/components/command-prompt";
 import ExperienceCard from "./experience-card";
 
 const experience = [
-  // TODO
   {
-    id: "dws-software-engineer-2024",
-    title: "Senior Technology Analyst - SDE-I",
+    id: "dws",
+    title: "Senior Technology Analyst · SDE-I",
     company: "DWS Group",
-    duration: "July 2024 - Present",
-    content: ["Working as a full-stack"],
-  },
-  {
-    id: "deutsche-bank-software-engineer-2023",
-    title: "Software Engineering Intern",
-    company: "Deutsche Bank",
-    duration: "May 2023 - July 2023",
+    duration: "July 2024 — Present · Mumbai–Pune, Hybrid",
     content: [
-      "Developed a web application to automate the process of creating and managing the data for the bank’s internal applications.",
-      "The application was built using React and Node.js and was deployed on the bank’s internal cloud.",
+      "Designed a multi-tenant architecture across Java Spring Boot services, including tenant context propagation, data isolation, and configurable routing for institutional business units.",
+      "Took full-stack ownership of business-critical services, shaping architecture across Spring Boot, React, WebSockets, and ActiveMQ.",
+      "Built real-time trading dashboards with React and AG Grid, backed by Java services and event-driven updates with WebSockets, ActiveMQ, and Kafka.",
+      "Coordinated data pipelines and release cycles with engineering and business partners; recognized by senior leadership for high-impact delivery and 99.9%+ operational stability.",
     ],
   },
   {
-    id: "spit-ai-research-intern-2023",
-    title: "Research Intern",
-    company: "AI & DL lab at SP-IT",
-    duration: "June 2023 - July 2023",
+    id: "wematter",
+    title: "Software Engineer Intern",
+    company: "W.E. matter",
+    duration: "January 2024 — June 2024 · Mumbai",
     content: [
-      "Developed a web application to automate the process of creating and managing the data for the bank’s internal applications.",
-      "The application was built using React and Node.js and was deployed on the bank’s internal cloud.",
+      "Built REST APIs with Node.js, Fastify, and MySQL alongside a React frontend.",
+      "Worked on a cross-platform social application using React Native.",
+      "Automated client-ready PowerPoint reports with TypeScript, reducing manual reporting time by 50%.",
+    ],
+  },
+  {
+    id: "deutsche-bank",
+    title: "Software Engineer Intern",
+    company: "Deutsche Bank",
+    duration: "June 2023 — July 2023 · Pune",
+    content: [
+      "Collaborated with DevOps to integrate a Java Spring Boot application into existing infrastructure.",
+      "Identified and addressed open-source software vulnerabilities.",
     ],
   },
 ];
 
-const Experience = () => {
-  return (
-    <section id="experience" className="m-16 text-white">
-      <div className="flex justify-center items-center">
-        <Command command="grep -i 'work experience' resume.txt" />
-      </div>
-      <div className="text-2xl m-8 flex flex-col justify-center items-center">
-        {/* loop over experience */}
-        {experience.map((exp) => (
-          <ExperienceCard
-            key={exp.id}
-            title={exp.title}
-            company={exp.company}
-            duration={exp.duration}
-            content={exp.content}
-          />
-        ))}
-      </div>
-    </section>
-  );
-};
+const Experience = () => (
+  <section id="experience" className="mx-auto w-[min(1120px,calc(100%-48px))] border-t border-border/60 py-16 md:py-20">
+    <Command command="grep -i 'work experience' resume.txt" />
+    <div className="mb-8 mt-5 max-w-[660px]">
+      <p className="mb-2 font-mono text-xs tracking-[0.12em] text-primary">THE JOURNEY SO FAR</p>
+      <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Experience</h2>
+      <p className="mt-3 leading-7 text-muted-foreground">Building and supporting software in finance, technology, and product teams.</p>
+    </div>
+    <div className="grid gap-4">
+      {experience.map((item) => (
+        <ExperienceCard
+          key={item.id}
+          title={item.title}
+          company={item.company}
+          duration={item.duration}
+          content={item.content}
+        />
+      ))}
+    </div>
+  </section>
+);
+
 export default Experience;

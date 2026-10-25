@@ -1,21 +1,20 @@
-// A Card where I can Write about my work experience 1 is at Deutsche Bank and 2 is at AI & DL lab at SP-IT
-//
-// Path: portfolio/src/components/Sections/Experience/ExperienceCard/ExperienceCard.jsx
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-import React from "react";
-
-const ExperienceCard = ({ title, company, duration, content }) => {
-  return (
-    <div className="flex flex-col items-center justify-center m-8 border border-[#eaeaea] hover:scale-105 hover:cursor-pointer transition-all duration-200 ease-in-out md:mb-4">
-      <div className="text-2xl font-semibold mb-4">{title}</div>
-      <div className="text-lg font-medium">{company}</div>
-      <div className="text-base font-normal">{duration}</div>
-      <div className="text-base font-normal m-4">
-        {content.map((line, index) => (
-          <div key={index}>{line}</div>
-        ))}
+const ExperienceCard = ({ title, company, duration, content }) => (
+  <Card>
+    <CardHeader className="flex flex-col gap-4 p-5 sm:flex-row sm:items-start sm:justify-between sm:p-7">
+      <div>
+        <CardTitle className="text-base">{title}</CardTitle>
+        <p className="mt-2 text-sm text-primary">{company}</p>
       </div>
-    </div>
-  );
-};
+      <p className="m-0 text-left text-xs text-muted-foreground sm:text-right">{duration}</p>
+    </CardHeader>
+    <CardContent className="p-5 pt-0 sm:px-7 sm:pb-7">
+      <ul className="ml-4 grid list-disc gap-2.5 text-sm leading-7 text-muted-foreground marker:text-primary">
+        {content.map((line) => <li key={line}>{line}</li>)}
+      </ul>
+    </CardContent>
+  </Card>
+);
+
 export default ExperienceCard;
