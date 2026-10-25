@@ -1,10 +1,8 @@
-const Command = (props) => {
-  return (
-    <div className="flex text-lg md:text-2xl gap-0.5">
-      <div className="text-cyan-400">portfolio@karan:-$ </div>
-      {props.command}
-    </div>
-  );
-};
+const Command = ({ command }) => (
+  <div className="flex flex-wrap items-center gap-2.5 font-mono text-xs text-muted-foreground" aria-label={`Command: ${command}`}>
+    <span className="text-primary">karan@portfolio:~$</span>
+    <span>{command}</span>
+  </div>
+);
 
 export default Command;

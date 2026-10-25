@@ -1,41 +1,46 @@
-import githubIcon from "@/assets/github.png";
-import linkedinIcon from "@/assets/linkedin.png";
-const Navbar = () => {
-  return (
-    <div className="flex justify-start items-center bg-black text-white p-4 sticky top-0 border-b border-[#72ffc9] z-10">
-      <div className="name">Karan Shah</div>
-      {/* menu bar for about, skills, Experience, Projects and Contact */}
-      <div className="flex flex-1 justify-end items-center">
-        <a href="#about" className="ml-4 cursor-pointer">
-          About
+const links = [
+  ["About", "about"],
+  ["Skills", "skills"],
+  ["Experience", "experience"],
+  ["Projects", "projects"],
+  ["Education", "education"],
+  ["Highlights", "achievements"],
+  ["Contact", "contact"],
+];
+
+const Navbar = () => (
+  <header className="sticky top-0 z-50 flex min-h-[var(--header-height)] flex-wrap items-center justify-between gap-x-6 gap-y-2 border-b border-primary/15 bg-background/90 px-5 py-3 backdrop-blur-xl md:px-8">
+    <a
+      className="inline-flex shrink-0 items-center gap-2.5 font-semibold tracking-tight"
+      href="#about"
+      aria-label="Karan Shah, back to top"
+    >
+      <span className="grid size-[34px] place-items-center rounded-lg border border-primary/35 font-mono text-xs text-primary">
+        KS
+      </span>
+      <span>Karan Shah</span>
+    </a>
+    <nav
+      className="order-3 flex w-full items-center justify-start gap-5 overflow-x-auto pb-1 text-xs text-muted-foreground scrollbar-none md:order-none md:w-auto md:justify-center md:gap-6 md:overflow-visible md:pb-0 md:text-sm"
+      aria-label="Main navigation"
+    >
+      {links.map(([label, id]) => (
+        <a
+          className="shrink-0 py-1 transition-colors hover:text-primary"
+          key={id}
+          href={`#${id}`}
+        >
+          {label}
         </a>
-        <a href="#skills" className="ml-4 cursor-pointer">
-          Skills
-        </a>
-        <a href="#experience" className="ml-4 cursor-pointer">
-          Experience
-        </a>
-        <a href="#projects" className="ml-4 cursor-pointer">
-          Projects
-        </a>
-        <a href="#achievements" className="ml-4 cursor-pointer">
-          Achievements
-        </a>
-        <a href="#contact" className="ml-4 cursor-pointer">
-          Contact
-        </a>
-      </div>
-      {/* LinkedIn and Github Icons with Link */}
-      <div className="ml-4 flex justify-end items-center">
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/karan-sunil-shah/">
-          <img width={35} height={35} src={linkedinIcon} alt="LinkedIn" />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Karan-Shah-2513/">
-          <img width={30} height={30} src={githubIcon} alt="GitHub" />
-        </a>
-      </div>
-    </div>
-  );
-};
+      ))}
+    </nav>
+    <a
+      className="shrink-0 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+      href="mailto:shahkaran2513@gmail.com"
+    >
+      Let&apos;s talk <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+);
 
 export default Navbar;
